@@ -1,0 +1,226 @@
+/*Обнуление*/
+*{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1.25;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+
+/*---------common----------*/
+body{}
+.container{
+	width: 70vw;
+	margin: 0 auto;
+}
+h1{
+	font-size: calc(18px + 25 * (100vw / 1024));
+	font-weight: bold;
+	padding-bottom: calc(10px + 20 * (100vw / 1024));
+	text-align: center;
+}
+h2{
+	font-size: calc(12px + 15 * (100vw / 1024));
+	font-weight: bold;
+	padding-bottom: calc(5px + 15 * (100vw / 1024));
+	text-align: center;
+	line-height: 2;
+}
+p{
+	font-size: calc(5px + 13 * (100vw / 1024));
+	text-align: justify;
+}
+
+header{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: 10vh;
+	background-image: url(../img/back.jpg);
+	padding: 1vh 2vw 1vh;
+}
+.logo{
+}
+header img{
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+.menu{
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+}
+.menu a{
+	padding: 3.5vh 0;
+	font-size: 3vh;
+	align-self: center;
+	justify-self: right;
+	color: white;
+	padding-left: 2vw;
+}
+@media (max-width: 768px){
+	header{
+		grid-template-columns: auto;
+		grid-template-rows: 12vh 12vh;
+		justify-items: center;
+	}
+	.logo{
+		display: grid;
+		justify-items: center;
+	}
+	.menu a{
+		padding: 3vh 2vw;
+		justify-self: center;
+		font-size: 2.5vh;
+	}
+}
+
+
+.admin{
+	padding: 8vh 0;
+	background: linear-gradient(#4B2B12, #5F4534, #B09687, #5F4534, #4B2B12);
+	/*background: linear-gradient(to top, rgba(72, 41, 20, 0.6), rgba(72, 41, 20, 0.6)), url(../img/background.jpg);*/
+}
+.container{
+	width: 70vw;
+	margin: 0 auto;
+}
+
+
+.text_input{
+	background-color: #DFDFDF;
+	height: calc(13px + 20 * (100vw / 1024));
+	width: 55vw;
+	padding: 1px 5px; 
+	font-size: calc(6px + 12 * (100vw / 1024));
+	border-radius: 1%;
+	margin-bottom: 20px;
+}
+.message_input{
+	background-color: #DFDFDF;
+	height: calc(50px + 50 * (100vw / 1024));
+	width: 55vw;
+	padding: 1px 5px;
+	font-size: calc(6px + 12 * (100vw / 1024));
+	border-radius: 1%;
+}
+.message_input_big{
+	height: calc(50px + 150 * (100vw / 1024));
+}
+.button_form{
+	border: 1.5px solid rgba(0, 0, 0, .6);
+	background: none;
+	text-transform: uppercase;
+	font-size: calc(8px + 10 * (100vw / 1024));
+	text-align: center;
+	padding: 8px;
+	margin-top: 15px;
+}
+.button_form:hover{
+	background: #DFDFDF;
+}
+.block_admin{
+	background-color: #fff;
+	display: grid;
+	padding: 5vh 5vw;
+	justify-items: center;
+}
+/*--------------------------*/
+
+
+
+/*---------admin--------*/
+table{
+	border-collapse: collapse;
+}
+table tr:first-child{
+	text-transform: uppercase;
+	font-weight: 500;
+}
+table td{
+	border: 2px solid #030000;
+	padding: 8px 1vw;
+}
+table p{
+	overflow-wrap: break-word;
+	text-align: center;
+	max-width: 20vw;
+	color: #030000;
+}
+table a{
+	text-decoration: underline;
+}
+/*--------------------------*/
+
+
+/*-------change_news--------*/
+.table_change_other table p{
+	max-width: 15vw;
+}
+.com{
+	max-width: 100vw;
+}
+.com p{
+	min-width: 30vw;
+}
+@media (max-width: 420px){
+	.com p{
+		min-width: 20vw;
+	}
+}
+/*--------------------------*/
+
+
+/*-----admin_question--------*/
+.question{
+	border: 3px solid black;
+	padding: 2vh 1vw 1vh;
+	margin-bottom: 4vh;
+	width: 60vw;
+}
+.question a{
+	width: 5vw;
+	right: 0;
+	text-align: right;
+}
+.question a p{
+	color: #B20000;
+	font-weight: 500;
+	right: 0;
+	text-align: right;
+	padding: 1vh 1vw;
+}
+/*--------------------------*/
